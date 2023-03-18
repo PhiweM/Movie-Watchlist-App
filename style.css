@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+ 
+header {
+    position: relative;
+    height: 11.5em;
+    width: 100%;
+}
+
+header, 
+.header-text {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('denise-jans-Lq6rcifGjOU-unsplash.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    color: #ffffff;
+    background-size: auto;
+}
+
+.header-text #title {
+    font-weight: 800;
+    font-size: 43px;
+    line-height: 24px;
+    letter-spacing: -0.043em;
+}
+
+.header-text #subLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+.header-text #subLink:hover {
+    color: #000000;
+}
+
+.container-sb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    background: #ffffff;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    border: 1px solid #D1D5DB;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    height: 35px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-sb  .search-bar {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   color: #6B7280;
+}
+
+.container-sb  .search-bar input{
+    height: 100%;
+    width: 100%;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: #6B7280;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .01em;
+}
+
+.container-sb  .search-bar i{
+    margin-left: 2%;
+}
+
+.container-sb #search-btn {
+    border: none;
+    height: 35px;
+    width: 22%;
+    color: #374151;
+    background: #F9FAFB;
+    border-left: 1px solid #D1D5DB;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .01em;
+    cursor: pointer;
+}
+
+.container-sb #search-btn:hover {
+    background: #00000050;
+    color: #ffffff;
+}
+
+main {
+    padding: 0 2.5em;
+    /* background-color: aqua; */
+    margin: 3em auto;
+    margin-bottom: 0;
+    width: 600px;
+}
+
+
+/* movie card styling */
+
+/* Flex property on containers */
+.card,
+.card-title-wrapper,
+.rating,
+.movie-stats,
+.add-to-watchList {
+    display: flex;
+}
+
+
+
+.card {
+    /* background-color: #b0cd0d; */
+    width: 600px;
+    height: 190px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 44px;
+    border-bottom: 1.5px solid #E5E7EB
+}
+
+
+/* Movie Img */
+ .movie-img {
+    height: 147px;
+    width: 99px;
+    border-radius: 3px;
+}
+
+
+.card-contents {
+  margin-top: 10px;
+  /* flex-direction: column; */
+  padding: 1px;
+  margin-left: 21px;
+  /* text-align: left; */
+  /* justify-content: top; */
+  /* background-color: #0dcd57; */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card-contents {
+        margin-top: 10px;
+        margin-right: 20%;
+      }
+}
+
+
+.card-contents
+.card-title-wrapper {
+    align-items: center;
+    margin-bottom: .1em;
+    height: 18px;
+}
+
+
+/* movie title and ratings*/
+.card-title-wrapper .card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: justify;
+    color: #000000;
+}
+
+.card-title-wrapper .rating {
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 8px;
+}
+
+.rating i {
+    color: #FEC654;
+    border-radius: 0.75px;
+    font-size: 10px;
+    margin-left: .4em;
+    margin-right: .6em;
+}
+
+/* movie stats div */
+.movie-stats {
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: .1em;
+    height: 12px;
+    margin-top: 11px;
+}
+
+.add-to-watchList  {
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-to-watchList:hover{
+   color: #FEC654;
+}
+
+
+.add-to-watchList .fa-circle-minus, .fa-circle-plus  {
+    color: #111827;
+    font-size: 16px;
+    margin-right: .3em;
+}
+
+/* Start exploring background */
+.start-exploring {
+    text-align: center;
+    color: #DFDDDD;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    top: 25vh;
+}
+
+.start-exploring i {
+    font-size: 90px;
+    margin-bottom: -20px;
+}
+
+/* watch list empty page */
+.add-movies-watchlist {
+   text-align: center;
+    color: #DFDDDD;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    top: 25vh;
+}
+
+.add-movies-watchlist .add-movies{
+    font-size: 15px;
+    color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.add-movies-watchlist .add-movies i{
+    font-size: 19px;
+    padding-right: .4em;
+
+}
+
+.add-movies-watchlist a {
+    color: #363636;
+}
+
+.plot {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.add-to-watchList .fa-circle-check {
+    color: #00B900 !important;
+    font-size: 16px;
+    margin-right: .3em;
+}
